@@ -3,6 +3,7 @@
    <aura:attribute name="alltimesheets" type="sObject[]"/>
    <aura:attribute name="lasttimesheets" type="sObject[]"/>
    <aura:attribute name="currentimesheets" type="sObject[]"/>
+   <aura:attribute name="listmode" type="String" />
    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
    <aura:handler name="switchList" event="c:onListSwitch"  action="{!c.switchListHandler}"/>
 
