@@ -1,0 +1,38 @@
+<aura:component >
+	<aura:attribute name="timesheets" type="sObject[]" />
+
+	<table class="slds-table slds-table--bordered slds-table--striped slds-table--cell-buffer slds-table--fixed-layout">
+		<thead>
+		<tr class="slds-text-heading--label">
+		    <th scope="col"><div class="slds-truncate" title="Timesheet"> Timesheet</div></th>
+			<th scope="col"><div class="slds-truncate" title="Employee">Employee</div></th>
+			<th scope="col"><div class="slds-truncate" title="Date of Birth">Date of Birth</div></th>
+			<th scope="col"><div class="slds-truncate" title="Start Date">Start Date</div></th>
+			<th scope="col"><div class="slds-truncate" title="End Date">End Date</div></th>
+			<th scope="col"><div class="slds-truncate" title="Total Hours">Total Hours</div></th>
+			<th scope="col"><div class="slds-truncate" title="Gross Pay">Gross Pay</div></th>
+			<th scope="col"><div class="slds-truncate" title="Taxes">Taxes</div></th>
+			<th scope="col"><div class="slds-truncate" title="Type">Type</div></th>
+			<th scope="col"><div class="slds-truncate" title="Submitted">Submitted</div></th>
+		</tr>
+		</thead>
+		<tbody>
+		<!-- Use the Apex model and controller to fetch server side data -->
+		<aura:iteration items="{!v.timesheets}" var="ts">
+			<tr>
+			<th scope="row"><div class="slds-truncate" title="{!ts.Name}"><a href="{!'/one/one.app?#/sObject/'+ ts.Id + '/view'}" target="_blank" id="{!ts.Id}">{!ts.Name}</a></div></th>
+			<th scope="row"><div class="slds-truncate" title="{!ts.Employee__r.Name}"><a onclick="{!c.editEmployee}" id="{!ts.Employee__r.Id}">{!ts.Employee__r.Name}</a></div></th>
+			<td><div class="slds-truncate" title="{!ts.Employee__r.Birthdate}"><lightning:formattedDateTime value="{!ts.Employee__r.Birthdate}" year="numeric" month="long" day="2-digit" /></div></td>
+			<td><div class="slds-truncate" title="{!ts.Start_Date__c}">{!ts.Start_Date__c}</div></td>
+			<td><div class="slds-truncate" title="{!ts.End_Date__c}">{!ts.End_Date__c}</div></td>
+			<td><div class="slds-truncate" title="{!ts.Total_Hours__c}">{!ts.Total_Hours__c}</div></td>
+			<td><div class="slds-truncate" title="{!ts.Gross_Pay__c}"><lightning:formattedNumber value="{!ts.Gross_Pay__c}" style="currency" currencyCode="USD" /></div></td>
+			<td><div class="slds-truncate" title="{!ts.Taxes__c}"><lightning:formattedNumber value="{!ts.Taxes__c}" style="currency" currencyCode="USD" /></div></td>
+			<td><div class="slds-truncate" title="{!ts.Type__c}">{!ts.Type__c}</div></td>
+			<td><div class="slds-truncate" title="{!ts.Submitted__c}"><lightning:input type="checkbox" checked="{!ts.Submitted__c}" disabled="true"/></div></td>
+			
+			</tr>
+		</aura:iteration>
+		</tbody>
+  </table>
+</aura:component>
