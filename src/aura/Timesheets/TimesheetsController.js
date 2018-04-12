@@ -10,5 +10,11 @@
 		component.set("v.listmode",param);
 		helper.getAllTimesheets(component);
 		
+	},
+	submitHandler: function(component, event, helper){
+        debugger;
+		var timesheets= event.getParam("timesheets");
+		if(timesheets.length >0)
+		  helper.submitCheckedTimesheets(component,timesheets);		
 	}
 })
