@@ -1,24 +1,55 @@
 <aura:component >
  <aura:registerEvent name="switchList" type="c:onListSwitch"/>
- <aura:attribute name="viewtype" type="Boolean" default="false" />   
-    
-<lightning:layout class="slds-page-header--object-home slds-page-header_joined slds-page-header_bleed slds-page-header slds-shrink-none">
-        <lightning:layoutItem >
-            <lightning:icon iconName="action:following" alternativeText="Camping List"/>
-        </lightning:layoutItem>
-        <lightning:layoutItem padding="horizontal-small">
-            <div class="page-section page-header">
-                <h1 class="slds-text-heading--label">Timesheets</h1>               
-            </div>  
-            <lightning:input type="toggle" 
+ <aura:registerEvent name="submit" type="c:onSubmitSelected"/>
+ <aura:attribute name="viewtype" type="Boolean" default="false" /> 
+ <aura:attribute name="options" type="List" default="[
+   {'label': 'All', 'value': 'all'},
+   {'label': 'Submitted', 'value': 'submitted'},
+   {'label': 'Not Submitted', 'value': 'nsubmitted'}                                                 
+    ]"/>
+  <aura:attribute name="value" type="String" default="all"/>
+
+ <div class="slds-page-header">
+  <div class="slds-grid">
+    <div class="slds-col slds-has-flexi-truncate">
+      <div class="slds-media slds-no-space slds-grow">
+        <div class="slds-media__figure">          
+           <lightning:icon iconName="action:following" alternativeText="Timesheets"/>          
+        </div>
+        <div class="slds-media__body">
+          <nav>
+            <ol class="slds-breadcrumb slds-line-height_reset">
+              <li class="slds-breadcrumb__item">
+                <span>TIMESHEETS</span>
+              </li>
+            </ol>
+          </nav>
+          <lightning:input type="toggle" 
                              label=""
                              name="checbox"
                              class="slds-p-around--small"
                              checked="{!v.viewtype}"
-                             messageToggleActive="Last Timesheets"
-                             messageToggleInactive="All Timesheets"
+                             messageToggleActive="Switch to All Timesheets"
+                             messageToggleInactive="Switch to Last Timesheets"
                              onchange="{!c.switchList}"/>
-        </lightning:layoutItem>
-      
-    </lightning:layout> 
+         
+        </div>
+      </div>
+    </div>   
+  </div>
+  <div class="slds-grid" style="float: right; margin-bottom: 10px" >    
+    <div class="slds-col slds-no-flex slds-grid slds-align-bottom" >       
+        <button class="slds-button slds-button_neutral" onclick="{!c.submitButtonClick}">Submit Selection</button>        
+   </div>
+  </div>
+  <div id="filter">
+    <lightning:radioGroup aura:id="mygroup"
+        name="radioStatus"
+        label="Filter"
+        options="{! v.options }"
+        value="{! v.value }"
+        onchange="{! c.handleChange }"
+         />
+  </div>
+ </div>     
 </aura:component>

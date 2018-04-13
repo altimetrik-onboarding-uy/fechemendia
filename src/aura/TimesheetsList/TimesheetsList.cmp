@@ -1,10 +1,14 @@
 <aura:component >
 	<aura:attribute name="timesheets" type="sObject[]" />
+	<aura:attribute name="selectedTimesheets" type="List" default="[]" />	
+    <aura:handler event="c:onSubmitSelected"  action="{!c.submitHandler}"/>
+	<aura:registerEvent name="submit" type="c:onSubmitTimesheets"/>
 
 	<table class="slds-table slds-table--bordered slds-table--striped slds-table--cell-buffer slds-table--fixed-layout">
 		<thead>
 		<tr class="slds-text-heading--label">
-		    <th scope="col"><div class="slds-truncate" title="Timesheet"> Timesheet</div></th>
+            <th scope="col"><div class="slds-truncate" title="Check"></div></th>
+            <th scope="col"><div class="slds-truncate" title="Timesheet"> Timesheet</div></th>
 			<th scope="col"><div class="slds-truncate" title="Employee">Employee</div></th>
 			<th scope="col"><div class="slds-truncate" title="Date of Birth">Date of Birth</div></th>
 			<th scope="col"><div class="slds-truncate" title="Start Date">Start Date</div></th>
@@ -20,8 +24,9 @@
 		<!-- Use the Apex model and controller to fetch server side data -->
 		<aura:iteration items="{!v.timesheets}" var="ts">
 			<tr>
-			<th scope="row"><div class="slds-truncate" title="{!ts.Name}"><a href="{!'/one/one.app?#/sObject/'+ ts.Id + '/view'}" target="_blank" id="{!ts.Id}">{!ts.Name}</a></div></th>
-			<th scope="row"><div class="slds-truncate" title="{!ts.Employee__r.Name}"><a onclick="{!c.editEmployee}" id="{!ts.Employee__r.Id}">{!ts.Employee__r.Name}</a></div></th>
+            <td><div class="slds-truncate" title="{!ts.Submitted__c}"><lightning:input type="checkbox" value="{!ts.Id}"   aura:id="checkbox" onchange="{!c.checkChange}" checked="false" disabled="{!ts.Submitted__c}"/></div></td>
+			<td><div class="slds-truncate" title="{!ts.Name}"><a href="{!'/one/one.app?#/sObject/'+ ts.Id + '/view'}" target="_blank" id="{!ts.Id}">{!ts.Name}</a></div></td>
+			<td><div class="slds-truncate" title="{!ts.Employee__r.Name}"><a onclick="{!c.editEmployee}" id="{!ts.Employee__r.Id}">{!ts.Employee__r.Name}</a></div></td>
 			<td><div class="slds-truncate" title="{!ts.Employee__r.Birthdate}"><lightning:formattedDateTime value="{!ts.Employee__r.Birthdate}" year="numeric" month="long" day="2-digit" /></div></td>
 			<td><div class="slds-truncate" title="{!ts.Start_Date__c}">{!ts.Start_Date__c}</div></td>
 			<td><div class="slds-truncate" title="{!ts.End_Date__c}">{!ts.End_Date__c}</div></td>

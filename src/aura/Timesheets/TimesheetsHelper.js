@@ -4,8 +4,10 @@
         // Create the action
        var action = component.get("c.getTimesheets");
        var mode = component.get("v.listmode"); 
+       var filter = component.get("v.filter");
        action.setParams({
-        "mode" : mode
+        "mode" : mode,
+        "filter" : filter
       });
 	   // Add callback behavior for when response is received
 	   action.setCallback(this, function(response) {

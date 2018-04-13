@@ -1,3 +1,6 @@
 .THIS h1 {
     font-size: .95rem;
 }
+.THIS #filter .slds-form-element__control{
+    display:inline-flex;
+}

@@ -1,9 +1,17 @@
 ({
 	switchList : function(component, event, helper) {
 
-		var viewType= component.get("v.viewtype")?"last":"all";		
-		var viewEvent= component.getEvent("switchList");
-		viewEvent.setParams({"mode":viewType});
-		viewEvent.fire();
-	}
+		helper.fireRefreshTable(component);
+	},
+	submitButtonClick : function(component, event, helper) {
+      	
+		  var appEvent = $A.get("e.c:onSubmitSelected");
+		  appEvent.setParams({ "param" : "test" });
+		  appEvent.fire();
+   },
+    handleChange : function(component, event, helper) {
+        
+		  helper.fireRefreshTable(component);
+   }
+		
 })
