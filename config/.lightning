@@ -1,0 +1,155 @@
+[
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v36.0/tooling/sobjects/AuraDefinition/0Ad6A000001YW73SAG"
+        },
+        "Id": "0Ad6A000001YW73SAG",
+        "AuraDefinitionBundleId": "0Ab6A000000nTcnSAE",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v36.0/tooling/sobjects/AuraDefinitionBundle/0Ab6A000000nTcnSAE"
+            },
+            "DeveloperName": "Timesheets"
+        },
+        "DefType": "CONTROLLER",
+        "Format": "JS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v36.0/tooling/sobjects/AuraDefinition/0Ad6A000001YW78SAG"
+        },
+        "Id": "0Ad6A000001YW78SAG",
+        "AuraDefinitionBundleId": "0Ab6A000000nTcnSAE",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v36.0/tooling/sobjects/AuraDefinitionBundle/0Ab6A000000nTcnSAE"
+            },
+            "DeveloperName": "Timesheets"
+        },
+        "DefType": "HELPER",
+        "Format": "JS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v36.0/tooling/sobjects/AuraDefinition/0Ad6A000001YW6ySAG"
+        },
+        "Id": "0Ad6A000001YW6ySAG",
+        "AuraDefinitionBundleId": "0Ab6A000000nTcnSAE",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v36.0/tooling/sobjects/AuraDefinitionBundle/0Ab6A000000nTcnSAE"
+            },
+            "DeveloperName": "Timesheets"
+        },
+        "DefType": "COMPONENT",
+        "Format": "XML"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v36.0/tooling/sobjects/AuraDefinition/0Ad6A000001YW7SSAW"
+        },
+        "Id": "0Ad6A000001YW7SSAW",
+        "AuraDefinitionBundleId": "0Ab6A000000nTcxSAE",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v36.0/tooling/sobjects/AuraDefinitionBundle/0Ab6A000000nTcxSAE"
+            },
+            "DeveloperName": "TimesheetsList"
+        },
+        "DefType": "HELPER",
+        "Format": "JS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v36.0/tooling/sobjects/AuraDefinition/0Ad6A000001YW7ISAW"
+        },
+        "Id": "0Ad6A000001YW7ISAW",
+        "AuraDefinitionBundleId": "0Ab6A000000nTcxSAE",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v36.0/tooling/sobjects/AuraDefinitionBundle/0Ab6A000000nTcxSAE"
+            },
+            "DeveloperName": "TimesheetsList"
+        },
+        "DefType": "COMPONENT",
+        "Format": "XML"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v36.0/tooling/sobjects/AuraDefinition/0Ad6A000001YW7NSAW"
+        },
+        "Id": "0Ad6A000001YW7NSAW",
+        "AuraDefinitionBundleId": "0Ab6A000000nTcxSAE",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v36.0/tooling/sobjects/AuraDefinitionBundle/0Ab6A000000nTcxSAE"
+            },
+            "DeveloperName": "TimesheetsList"
+        },
+        "DefType": "CONTROLLER",
+        "Format": "JS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v36.0/tooling/sobjects/AuraDefinition/0Ad6A000001YW7XSAW"
+        },
+        "Id": "0Ad6A000001YW7XSAW",
+        "AuraDefinitionBundleId": "0Ab6A000000nTd2SAE",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v36.0/tooling/sobjects/AuraDefinitionBundle/0Ab6A000000nTd2SAE"
+            },
+            "DeveloperName": "TimesheetsHeader"
+        },
+        "DefType": "COMPONENT",
+        "Format": "XML"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v36.0/tooling/sobjects/AuraDefinition/0Ad6A000001YW7cSAG"
+        },
+        "Id": "0Ad6A000001YW7cSAG",
+        "AuraDefinitionBundleId": "0Ab6A000000nTd2SAE",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v36.0/tooling/sobjects/AuraDefinitionBundle/0Ab6A000000nTd2SAE"
+            },
+            "DeveloperName": "TimesheetsHeader"
+        },
+        "DefType": "CONTROLLER",
+        "Format": "JS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v36.0/tooling/sobjects/AuraDefinition/0Ad6A000001YWDRSA4"
+        },
+        "Id": "0Ad6A000001YWDRSA4",
+        "AuraDefinitionBundleId": "0Ab6A000000nTeoSAE",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v36.0/tooling/sobjects/AuraDefinitionBundle/0Ab6A000000nTeoSAE"
+            },
+            "DeveloperName": "onListSwitch"
+        },
+        "DefType": "EVENT",
+        "Format": "XML"
+    }
+]

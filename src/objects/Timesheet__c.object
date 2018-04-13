@@ -208,6 +208,19 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Total_Hours__c</fullName>
+        <externalId>false</externalId>
+        <formula>Monday__c  +  Thursday__c  +  Wednesday__c  +  Tuesday__c  +  Friday__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Tuesday__c</fullName>
         <externalId>false</externalId>
         <label>Tuesday</label>
