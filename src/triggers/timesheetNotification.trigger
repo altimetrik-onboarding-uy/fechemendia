@@ -1,7 +1,7 @@
 trigger timesheetNotification on Timesheet__c (before insert) {    
    
        for(Timesheet__c ts : Trigger.New) {
-           if((ts.Gross_Pay__c>=2000) || ((ts.Monday__c + ts.Tuesday__c + ts.Wednesday__c + ts.Thursday__c + ts.Friday__c)>40)){
+           if((ts.Gross_Pay__c>=2000) || (ts.Total_Hours__c>40)){
                Contact c= [SELECT Email from Contact where id=:ts.Employee__c LIMIT 1];             
                
                String templateString = 'A timesheed has been registered for you with the following information: '
